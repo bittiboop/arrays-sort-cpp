@@ -3,11 +3,17 @@
 using namespace std;
 
 void add(int strt, int end) {
-	int sum = 0;
+	int perf = 0;
 	for (int i = strt; i <= end; i++) {
-		sum += i;
+		if (i == 1) {
+			continue;
+		}
+		if (i == 6 || i == 28 || i == 496 || i == 8128 || i == 33550336) {
+			perf++;
+			cout << i << endl;
+		}
 	}
-	cout << "The sum of the numbers in the range is: " << sum << endl;
+	cout << "The perfect numbers between " << strt << " and " << end << " are: " << perf << endl;
 	return;
 }
 int main() {
