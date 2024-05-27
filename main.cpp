@@ -1,18 +1,22 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
-void add(int num);
+void add(int num1, int num2);
 
 int main() {
-	int num;
-	cout << "Enter the number to know the cube of it: ";
-	cin >> num;
-	add(num);
+	int num1, num2;
+	cout << "Enter the number one and two: ";
+	cin >> num1 >> num2;
+	add(num1, num2);
 
 	return 0;
 }
-void add(int num) {
-	cout << pow(num, 3);
+void add(int num1, int num2) {
+	if (num1 > num2) {
+		cout << "The number " << num1 << " is greater than the number" << num2 << endl;
+	}
+	if (num1 < num2){
+		cout << "The number " << num1 << " is less than the number "  << num2 << endl;
+	}
 	return;
 }
