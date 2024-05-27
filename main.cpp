@@ -1,18 +1,22 @@
 #include <iostream>
-#include <cmath>
+
 using namespace std;
 
-void add(int exp, int base) {
-	cout << pow(base, exp);
+void add(int strt, int end) {
+	int sum = 0;
+	for (int i = strt; i <= end; i++) {
+		sum += i;
+	}
+	cout << "The sum of the numbers in the range is: " << sum << endl;
 	return;
 }
 int main() {
-	int exp, base;
-	cout << "Enter the exponent of power: ";
-	cin >> exp;
-	cout << "Enter the base of power: ";
-	cin >> base;
-	add(exp, base);
+	int strt, end;
+	cout << "Enter the start of the range: ";
+	cin >> strt;
+	cout << "Enter the end of the range: ";
+	cin >> end;
+	add(strt, end);
 	
 	return 0;
 }
