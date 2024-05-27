@@ -1,19 +1,31 @@
 #include <iostream>
 using namespace std;
-void add(int height, int width) {
-	for (size_t i = 0; i < height; i++) {
-		for (size_t j = 0; j < width; j++) {
-			cout << "*";
-		}
-		cout << endl;
-	}
-	return;
-}
+
+void add(int num);
+
 int main() {
-	int height, width;
-	cout << "Enter the height and width of the rectangle: ";
-	cin >> height >> width;
-	add(height, width);
+	int num;
+	cout << "Enter the number to know prime its or not: ";
+	cin >> num;
+	add(num);
 
 	return 0;
+}
+void add(int num) {
+	bool isPrime = true;
+	for (int i = 2; i <= num / 2; i++) {
+		if (num % i == 0) {
+			isPrime = false;
+			break;
+		}
+	}
+	if (num == 0 || num == 1)
+	{
+		isPrime = false;
+	}
+	if(isPrime)
+		cout << num << " is a prime number." << endl;
+	else
+		cout << num << " is not a prime number." << endl;
+	return;
 }
