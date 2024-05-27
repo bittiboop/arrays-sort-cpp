@@ -14,6 +14,6 @@ int main() {
 	cout << "Enter the height and width of the rectangle: ";
 	cin >> height >> width;
 	cout << add(height, width);
-	
+
 	return 0;
 }
